@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini cursus Git met GitHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+
+</head>
+
+<body class="markdown-body">
+    <main id="main" class="container-lg px-3 my-5">
+        <h1><a href="#">Mini cursus Git met GitHub</a></h1>
+        <div>
+            <p>
+                <script>
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth() + 1;
+                    var yyyy = today.getFullYear();
+                    if (dd < 10) {
+                        dd = '0' + dd;
+                    }
+                    if (mm < 10) {
+                        mm = '0' + mm;
+                    }
+                    document.write(dd + '/' + mm + '/' + yyyy);
+                </script>
+            </p>
+            <p>Anthony Aichouche</p>
+        </div>
+        <h2>Korte inhoudstafel</h2>
+        <ul>
+            <li><b><a href="#git">Wat is Git?</a></b></li>
+            <li><b><a href="#github">Wat is GitHub?</a></b></li>
+            <li><b><a href="#terminal">Terminal configureren.</a></b></li>
+            <li><b><a href="#actions">Git acties:</a></b></li>
+            <ul>
+                <li>$ git clone</li>
+                <ul>
+                    <li>.gitignore</li>
+                    <li>README.md</li>
+                </ul>
+                <li>$ git add</li>
+                <li>$ git commit</li>
+                <li>$ git push</li>
+            </ul>
+            <li><b>Wat zijn branches?</b></li>
+            <ul>
+                <li>$ git checkout</li>
+                <li>$ git push origin --delete remoteBranchName</li>
+            </ul>
+            <li><b><a href="#pages">Extra: Github pages</a></b></li>
+        </ul>
+
+        <h1></h1>
+        <h2 id="git"> Wat is Git? </h2>
+        <p>
+            Git is een versiebeheersysteem voor code die je schrijft om software/ websites te maken.
+        </p>
+        <b class="text-blue"> Maar, wat is een versiebeheersysteem?</b>
+
+        <p>
+            Een versiebeheersysteem is een systeem die je gebruikt om verschillende versies van uw code op te slaan
+            en navigeerbaar maken.
+            <br>
+            Dit wordt meestal gebruikt in combinatie met een website die uw repositories
+            opslaat. Meer info in <a href="#github">het volgende deel</a>.
+            <br>
+            <br>
+            <b>Voordelen?</b>
+            Daar zijn er veel van: <br>
+            Eerst en voor
+
+        </p>
+
+        <div class="border-left border-blue pl-1">
+            <p>
+                Weetje: git werd oorspronkelijk ontwikkeld door Linus Torvalds die ook de <a target="_blank"
+                    href="https://www.kernel.org">Linux kernel</a> ontwikkeld
+                heeft.
+            </p>
+        </div>
+        <h2 id="github">Wat is GitHub?</h2>
+        <p>
+            GitHub is a web-based hosting service for version control using Git. It is often referred to as simply
+            " GitHub".
+        </p>
+        <h2 id="terminal">Laten we een terminal configureren.</h2>
+        <h3>Wat is je naam en je email ?</h3>
+        <p>Eerst moeten we ingeven wie we zijn. </p>
+        <code class="bg-gray-dark p-3 text-white">
+            $ git config --global user.name "Jouw naam"
+        </code>
+        <br>
+        <br>
+        <code class="bg-gray-dark p-3 text-white">
+            $ git config --global user.email "Jouw email"
+        </code>
+        <h3>Laten we nu een GitHub account maken.</h3>
+        <a href="https://www.github.com">https://www.github.com</a>
+
+        <h2 id="actions">Nu kunnen we de echte cursus beginnen!</h2>
+        <h2>git acties</h2>
+        <h3>$ git clone</h3>
+        <p>
+            Git clone is een commando die een online repository importeerd naar de map waarin je staat.
+            Het is eigenlijk hetzelfde als een download van een repository.
+        </p>
+        Voorbeeld:
+        <br>
+        <br>
+        <code class="bg-gray-dark p-3 text-white mt-5">
+            $ git clone ssh:repository.git
+        </code>
+        <br>
+        <br>
+
+        <h2 id="pages">Extra GitHub pages</h2>
+        <p>
+            GitHub pages is een service die je kan gebruiken om je website te publiceren op GitHub.
+        </p>
+
+
+        <h1></h1>
+        <footer>
+            <div class="d-flex flex-justify-between">
+                <div> Built with ❤️ by Anthony Aichouche.</div>
+                <div>Licensed under the MIT License.</div>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>
