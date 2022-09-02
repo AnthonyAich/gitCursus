@@ -6416,4 +6416,57 @@ pre {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+code {
+  background-color: #333;
+  color: #f8f8f8;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.vraag {
+  border: 1px solid #0366d6;
+  padding: 3px 7px;
+  border-radius: 5px;
+  background-color: rgba(3, 102, 214, 0.2);
+  color: #0366d6;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.vraag::before {
+  content: "?";
+  color: #0366d6;
+  margin-left: -18px;
+  border: 2px solid #0366d6;
+  padding: 1px 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.weetje {
+  border: 1px solid #28a745;
+  padding: 3px 7px;
+  border-radius: 5px;
+  background-color: rgba(40, 167, 70, 0.2);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #28a745;
+}
+
+.weetje::before {
+  content: "!";
+  color: #28a745;
+  font-weight: bold;
+  margin-left: -18px;
+  border: 2px solid #28a745;
+  padding: 1px 8px;
+  background-color: #fff;
+  border-radius: 50%;
+}
 /*# sourceMappingURL=styles.css.map */
