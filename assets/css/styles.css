@@ -6426,6 +6426,10 @@ code {
   line-height: 1.5;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .vraag {
   border: 1px solid #0366d6;
   padding: 3px 7px;

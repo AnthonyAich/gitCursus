@@ -1,6 +1,11 @@
 //import ./framework
 @import "./framework";
 
+* {
+    //smoth scroll
+    scroll-behavior: smooth;
+}
+
 .vraag {
     //lightblue
     border: 1px solid #0366d6;
