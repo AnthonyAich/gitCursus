@@ -6477,7 +6477,8 @@ code {
   display: block;
   color: #fff;
   background-color: #24292e !important;
-  padding: 7px;
+  padding: 7px 15px;
+  border-radius: 5px;
   font-size: 16px;
   margin-bottom: 2px;
 }
