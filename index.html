@@ -46,65 +46,83 @@
             <li><b><a href="#pages">Extra: Github pages</a></b></li>
         </ul>
 
-        <h2 id="git">Wat is Git?</h2>
-        <p>
-            Git is een versiebeheersysteem voor broncode.
-        </p>
-        <p class="vraag"> Versiebeheersysteem? Wat is dat?</p>
-        <p>Een versiebeheersysteem is een programmaatje die je gebruikt om verschillende versies van uw code op te
-            slaan.
-            <br />
-            Bijvoorbeeld de welbekende: "2.1","5.2","16.5" etc... zijn versies van software.</p>
-        <p>Dit wordt meestal gebruikt in combinatie met een website die uw code
-            opslaat op het internet (bv: GitHub). Meer info over GitHub in <a href="#github">het volgende deel</a>.
-        </p>
-        <p class="weetje">
-            <b>Weetje:</b> Git werd oorspronkelijk ontwikkeld door Linus Torvalds die initieel ook de <a target="_blank"
-                href="https://www.kernel.org">Linux kernel</a> ontwikkeld heeft.
-        </p>
-        <h2 id="github">Wat is GitHub?</h2>
-        <p>
-            GitHub is een plaats waar je <b>online</b> alle Git repositories kan <b>opslaan</b>. Voordeel daarvan
-            is dat
-            je
-            <b>online altijd je
-                code kan terugvinden</b>. M.a.w. wat een stick vroeger deed, kan je nu doen met GitHub.
-            <br>
-            Een <b>ander voordeel</b> is dat je hiermee kunt <b>samenwerken met anderen</b>. Iedereen kan code
+        <section id="git">
+            <h2>Wat is Git?</h2>
+            <p>
+                Git is een <b>versiebeheersysteem</b> voor broncode.
+            </p>
+            <p class="vraag"> Een versiebeheersysteem? Wat is dat?</p>
+            <p>Een versiebeheersysteem is een programmaatje die je gebruikt om verschillende versies van uw code op te
+                slaan.
+                <br />
+                Bijvoorbeeld de welbekende: "2.1","5.2","16.5" etc... zijn versies van software.</p>
+            <p>Dit wordt meestal gebruikt in combinatie met een website die uw code
+                opslaat op het internet (bv: GitHub). Meer info over GitHub in <a href="#github">het volgende deel</a>.
+            </p>
+            <p class="vraag"> Waarom zou ik dit gebruiken?</p>
+            <p>Als je een project maakt, kan je verschillende versies van je code opslaan. Dit is handig als je een
+                fout maakt in je code, dan kan je altijd terug naar een vorige versie gaan, en verder doen vanaf
+                werkende software.</p>
+            <p class="weetje">
+                <b>Weetje:</b> Git werd oorspronkelijk ontwikkeld door Linus Torvalds die initieel ook de <a
+                    target="_blank" href="https://www.kernel.org">Linux kernel</a> ontwikkeld heeft.
+            </p>
+        </section>
+        <section id="github">
+            <h2>Wat is GitHub?</h2>
+            <p>
+                GitHub is een plaats waar je <b>online</b> alle Git repositories kan <b>opslaan</b>. Voordeel daarvan
+                is dat je <b>online altijd je code kan terugvinden</b>.
+                <br>
+                Dat kan handig zijn als je bijvoorbeeld op school werkt aan een project, en dan thuis met een andere
+                computer verder wilt werken.</p>
+            </p>
+            Een <b>ander voordeel</b> is dat je hiermee kunt <b>samenwerken met anderen</b>. Iedereen (van jouw team)
+            kan
+            code
             aannpassen en/of
             toevoegen aan je repo.
-        </p>
-        <h2 id="terminal">Laten we de terminal configureren.</h2>
-        <p>
-            Om Git en GitHub ten volste te kunnen gebruiken, moet Git ook eerst weten wie je bent.
-        </p>
-        <p>Laten we de beginnen en de terminal open.</p>
-        <code class="bash">
-            git config --global user.name "Jouw naam"
-        </code>
-        <code class="bash">
-            git config --global user.email "Jouw email"
-        </code>
-        <h3>Laten we nu een GitHub account maken.</h3>
-        <a href="https://www.github.com">https://www.github.com</a>
+            </p>
+        </section>
+        <section id="terminal">
+            <h2>Laten we de Git(Hub) configureren.</h2>
+            <p>
+                Om Git en GitHub ten volste te kunnen gebruiken, moet Git ook eerst weten wie je bent.
+            </p>
+            <p>Laten we de beginnen en de <b>terminal</b> open.</p>
+            <code class="bash">
+                git config --global user.name "Jouw naam"
+            </code>
+            <code class="bash">
+                git config --global user.email "Jouw email"
+            </code>
+            <p>Laten we nu een GitHub account maken.</p>
+            <a href="https://www.github.com">https://www.github.com</a>
+        </section>
 
-        <h2 id="actions">Nu kunnen we de echte cursus beginnen!</h2>
-        <h2>git acties</h2>
-        <h3>$ git clone</h3>
-        <p>
-            Git clone is een commando die een online repository importeerd naar de map waarin je staat.
-            Het is eigenlijk hetzelfde als een download van een repository.
-        </p>
-        Voorbeeld:
-        <code class="bash">
-            git clone ssh:repository.git
-        </code>
+        <section id="actions">
+            <h2>>Nu kunnen we echt beginnen met Git(Hub)!</h2>
+            <h3>git acties</h3>
+            <h3>$ git clone</h3>
+            <p>
+                Git clone is een commando die een online repository importeerd naar de map waarin je staat.
+                Het is eigenlijk hetzelfde als het downloaden van een repository.
+            </p>
+            <p>Voorbeeld:
+                <code class="bash">
+                    git clone git@github.com:AnthonyAich/TestRepo.git
+                </code>
+            </p>
+            Je ziet dat er nu een nieuwe gedownload werd.
+        </section>
 
-        <h2 id="pages">Extra GitHub pages</h2>
-        <p>
-            GitHub pages is een service die je kubt gebruiken om je website te publiceren op het internet.
-            (let op, github pages is momenteel enkel beschikbaar voor statische websites)
-        </p>
+        <section id="pages">
+            <h2>Extra GitHub pages</h2>
+            <p>
+                GitHub pages is een service die je kubt gebruiken om je website te publiceren op het internet.
+                (let op, github pages is momenteel enkel beschikbaar voor statische websites)
+            </p>
+        </section>
 
 
         <h1></h1>
