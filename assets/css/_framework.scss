@@ -6446,7 +6446,6 @@ code {
     text-align: right
 }
 
-.markdown-body code,
 .markdown-body tt {
     padding: 0.2em 0.4em;
     margin: 0;
@@ -6827,13 +6826,4 @@ pre {
     line-height: 1.5;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-}
-
-code {
-    background-color: #333;
-    color: #f8f8f8;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-size: 14px;
-    line-height: 1.5;
 }
