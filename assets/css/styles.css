@@ -6466,7 +6466,6 @@ pre {
 }
 
 #actions h3 {
-  margin-bottom: 0;
   color: #0366d6;
 }
 
@@ -6511,6 +6510,7 @@ abbr.info {
   -webkit-transition: all 1s;
   transition: all 1s;
   text-decoration: none;
+  cursor: help;
 }
 
 #actions .littleInfo {
