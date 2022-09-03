@@ -8,6 +8,9 @@
     <title>Mini cursus Git met GitHub</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <script defer src="./assets/js/util.js"></script>
+    <script>
+        const authors = "Anthony Aichouche";
+    </script>
 </head>
 
 <body class="markdown-body">
@@ -18,7 +21,12 @@
         <h1><a href="#">Mini cursus Git met GitHub</a>
         </h1>
         <div>
-            <p>Anthony Aichouche</p>
+            <p>
+                <b>Author:</b>
+                <script>
+                    document.write(authors);
+                </script>
+            </p>
         </div>
         <h2>Inhoudstafel</h2>
         <ul>
@@ -128,7 +136,9 @@
         <h1></h1>
         <footer>
             <div class="d-flex flex-justify-between">
-                <div> Made with ❤️ by Anthony Aichouche.</div>
+                <div> Made with ❤️ by <script>
+                        document.write(authors);
+                    </script>.</div>
                 <div>Licensed under the <a target="_blank" href="./LICENSE">MIT License</a>.</div>
             </div>
 
