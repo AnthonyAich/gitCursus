@@ -113,105 +113,116 @@
             <h2>Nu kunnen we echt beginnen met Git(Hub)!</h2>
             <!-- ! git clone -->
             <h3>$ git clone</h3>
-            <p>
-                Git clone is een commando die een specifieke online <abbr class="info" title="
-                Een repository is een map waarin je alle bestanden van je project opslaat.">repository</abbr>
-                importeerd naar de map
-                waarin je staat.
-                Het is eigenlijk hetzelfde als het downloaden van een repository.
-            </p>
-            <p><b>Voorbeeld:</b>
-                <code class="bash">
-                    git clone git@github.com:AnthonyAich/TestRepo.git
-                </code>
-            </p>
-            Je ziet dat er nu een nieuwe map gedownload werd. Hierin zitten alle bestanden van de repository.
-            <h3>Veel voorkomende files:</h3>
-            <article class="littleInfo">
-                <h3>.gitignore</h3>
+            <section class="uitleg">
                 <p>
-                    In de map zit ook een bestand genaamd <b>.gitignore</b>. Dit is een bestand waarin je kan aangeven
-                    welke bestanden je niet wilt opslaan in je repository.
-                    <br>
-                    Dit is handig als je bv. een bestand hebt met wachtwoorden, of een bestand met een API key nodig
-                    hebt.
+                    Git clone is een commando die een specifieke online <abbr class="info" title="
+                    Een repository is een map waarin je alle bestanden van je project opslaat.">repository</abbr>
+                    importeerd naar de map
+                    waarin je staat.
+                    Het is eigenlijk hetzelfde als het downloaden van een repository.
                 </p>
-            </article>
-
-            <article class="littleInfo">
-                <h3>README.md</h3>
-                <p>
-                    In de map zit ook een bestand genaamd <b>README.md</b>. Dit is een bestand waarin je kan aangeven
-                    wat de repository is, en wat er in zit.
-                    <br>
-                    Dit is handig als je bv. een project maakt voor school, en je wilt dat je leerkracht weet wat er in
-                    zit. En je meer info wilt geven over je project.
+                <p><b>Voorbeeld:</b>
+                    <code class="bash">
+                        git clone git@github.com:AnthonyAich/TestRepo.git
+                    </code>
                 </p>
-            </article>
+                Je ziet dat er nu een nieuwe map gedownload werd. Hierin zitten alle bestanden van de repository.
+                <h3>Veel voorkomende files:</h3>
+                <article class="littleInfo">
+                    <h3>.gitignore</h3>
+                    <p>
+                        In de map zit ook een bestand genaamd <b>.gitignore</b>. Dit is een bestand waarin je kan
+                        aangeven
+                        welke bestanden je niet wilt opslaan in je repository.
+                        <br>
+                        Dit is handig als je bv. een bestand hebt met wachtwoorden, of een bestand met een API key nodig
+                        hebt.
+                    </p>
+                </article>
+                <article class="littleInfo">
+                    <h3>README.md</h3>
+                    <p>
+                        In de map zit ook een bestand genaamd <b>README.md</b>. Dit is een bestand waarin je kan
+                        aangeven
+                        wat de repository is, en wat er in zit.
+                        <br>
+                        Dit is handig als je bv. een project maakt voor school, en je wilt dat je leerkracht weet wat er
+                        in
+                        zit. En je meer info wilt geven over je project.
+                    </p>
+                </article>
+            </section>
 
             <!-- ! git add -->
             <h3 id="add">$ git add</h3>
-            <p>
-                Git add is een commando die zegt dat je bestanden <b>wilt <a href="#commit">commiten</a></b>.
-                Als je dit doet
-                gaan je nieuwe/
-                aangepaste bestanden van unstaged, naar staged.
-                <br>
-                Dit doet in praktijk niet zo heel veel, je verteld Git gewoon dat je die code in de toekomst wilt
-                opslaan.
-            </p>
-            <p>
-                <b>Voorbeeld voor adden:</b>
-                <code class="bash">
-                    git add .
-                </code>
-            </p>
-            <p class="weetje">
-                <b>Weetje:</b> Het punt (.) na <b>git add</b> staat voor "alles", je kunt dit vervangen door een
-                specifieke bestandsnaam.
-            </p>
-            <p>
-                <b>Voorbeeld voor adden van een specifiek bestand:</b>
-                <code class="bash">
-                    git add index.html
-                </code>
-            </p>
+            <section class="uitleg">
+                <p>
+                    Git add is een commando die zegt dat je bestanden <b>wilt <a href="#commit">commiten</a></b>.
+                    Als je dit doet
+                    gaan je nieuwe/
+                    aangepaste bestanden van unstaged, naar staged.
+                    <br>
+                    Dit doet in praktijk niet zo heel veel, je verteld Git gewoon dat je die code in de toekomst wilt
+                    opslaan.
+                </p>
+                <p>
+                    <b>Voorbeeld voor adden:</b>
+                    <code class="bash">
+                        git add .
+                    </code>
+                </p>
+                <p class="weetje">
+                    <b>Weetje:</b> Het punt (.) na <b>git add</b> staat voor "alles", je kunt dit vervangen door een
+                    specifieke bestandsnaam.
+                </p>
+                <p>
+                    <b>Voorbeeld voor adden van een specifiek bestand:</b>
+                    <code class="bash">
+                        git add index.html
+                    </code>
+                </p>
+            </section>
             <!-- ! git commit -->
             <h3 id="commit">$ git commit</h3>
-            <p>
-                Met het commando <b>Git commit</b> geef je nu aan dat de daarnet "<a href="#add">added</a>" bestanden
-                kunnen
-                <b>opgeslaan worden</b>.
-                Hier geef je ook altijd een <b>uitleg van wat er net verranderd is</b>.
-                <br />
-                Dus als je dit doet gaan je staged bestanden van staged, naar committed.
-            </p>
-            <p>
-                <b>Voorbeeld voor commiten:</b>
-                <code class="bash">
-                    git commit -m <span style="color: #6da3e2 ;">"Nieuwe footer bij index.html"</span>
-                </code>
-            </p>
-            <p class="weetje">
-                <b>Weetje:</b> De <b>-m</b> staat voor "message".
-            </p>
+            <section class="uitleg">
+                <p>
+                    Met het commando <b>Git commit</b> geef je nu aan dat de daarnet "<a href="#add">added</a>"
+                    bestanden
+                    kunnen
+                    <b>opgeslaan worden</b>.
+                    Hier geef je ook altijd een <b>uitleg van wat er net verranderd is</b>.
+                    <br />
+                    Dus als je dit doet gaan je staged bestanden van staged, naar committed.
+                </p>
+                <p>
+                    <b>Voorbeeld voor commiten:</b>
+                    <code class="bash">
+                        git commit -m <span style="color: #6da3e2 ;">"Nieuwe footer bij index.html"</span>
+                    </code>
+                </p>
+                <p class="weetje">
+                    <b>Weetje:</b> De <b>-m</b> staat voor "message".
+                </p>
+            </section>
 
             <!-- ! git push -->
             <h3>$ git push</h3>
-            <p>
-                Met het commando <b>Git push</b> geef je aan dat je de daarnet "<a href="#commit">committed</a>"
-                bestanden
-                wilt
-                <b>uploaden</b> naar de <b>online repository (bv: op GitHub)</b>.
-                <br />
-                Dus als je dit doet gaan je committed bestanden van committed, naar pushed.
-            </p>
-            <p>
-                <b>Voorbeeld voor pushen:</b>
-                <code class="bash">
-                    git push
-                </code>
-            </p>
+            <section class="uitleg">
+                <p>
+                    Met het commando <b>Git push</b> geef je aan dat je de daarnet "<a href="#commit">committed</a>"
+                    bestanden
+                    wilt
+                    <b>uploaden</b> naar de <b>online repository (bv: op GitHub)</b>.
+                    <br />
+                    Dus als je dit doet gaan je committed bestanden van committed, naar pushed.
+                </p>
+                <p>
+                    <b>Voorbeeld voor pushen:</b>
+                    <code class="bash">
+                        git push
+                    </code>
+                </p>
+            </section>
 
         </section>
 
