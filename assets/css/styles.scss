@@ -74,11 +74,12 @@ code {
 
 abbr.info:hover::after {
     font-size: 0.8vw;
+    font-weight: 600;
     background: rgba(3, 102, 214, 0.20);
     border: 1px solid #0366d6;
     border-radius: 4px;
     bottom: 100%;
-    content: attr(title);
+    content: attr(uitleg);
     display: block;
     left: 0%;
     padding: 1em;
