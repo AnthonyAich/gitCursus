@@ -10,8 +10,6 @@
     <script defer src="./assets/js/util.js"></script>
     <script>
         const authors = "Anthony Aichouche";
-        //go to another page
-        window.location.href = "https://www.google.com";
     </script>
 </head>
 
@@ -45,7 +43,6 @@
                 <li>$ git <b>add</b></li>
                 <li>$ git <b>commit</b></li>
                 <li>$ git <b>push</b></li>
-                <li>$ git <b>pull</b></li>
             </ul>
             <li><b>Branches</b></li>
             <ul>
@@ -53,6 +50,7 @@
                 <li>$ git <b>merge</b> branch-name</li>
                 <li>$ git <b>push</b> -u origin branch-name</li>
                 <li>$ git <b>push</b> origin --delete remote-branch-name</li>
+                <li>$ git <b>pull</b></li>
             </ul>
             <li><b><a href="#pages">Extra: Github pages</a></b></li>
         </ul>
@@ -226,28 +224,68 @@
                     </code>
                 </p>
             </section>
-
-        </section>
-
-        <section id="pages">
-            <h2>Extra GitHub pages</h2>
-            <p>
-                GitHub pages is een service die je kubt gebruiken om je website te publiceren op het internet.
-                (let op, github pages is momenteel enkel beschikbaar voor statische websites)
-            </p>
-        </section>
-
-
-        <h1></h1>
-        <footer>
-            <div class="d-flex flex-justify-between">
-                <div> Made with ❤️ by <script>
-                        document.write(authors);
-                    </script>.</div>
-                <div>Licensed under the <a target="_blank" href="./LICENSE">MIT License</a>.</div>
+            <h1></h1>
+            <h1>Branches</h1>
+            <div class="imgRight">
+                <div>
+                    <p>
+                        Een branch is een soort van aparte map, waarin je kan werken zonder dat het invloed
+                        heeft op de
+                        hoofdmap.
+                        <br>
+                        Je kan dus bv. een nieuwe feature maken, zonder dat het invloed heeft op de
+                        hoofdmap.
+                    </p>
+                </div>
+                <!-- <img src="assets/memes/branch_meme.jpg" alt="meme branches"> -->
             </div>
 
-        </footer>
+            <!-- ! git checkout -->
+            <h3>$ git checkout</h3>
+            <section class="uitleg">
+                <p>
+                    Met het commando <b>Git checkout</b> ga je naar een andere <b>branch</b>.
+                    <br />
+                    Een branch is een soort van <b>versie</b> van je project.
+                    <br />
+                    Je kunt bv. een branch maken voor een nieuwe feature, en als je die feature af hebt kun je die
+                    branch
+                    samenvoegen met de <b>master branch</b>.
+                </p>
+                <p>
+                    <b>Voorbeeld voor checkouten:</b>
+                    <code class="bash">
+                        git checkout <span style="color: #6da3e2;">"feature"</span>
+                    </code>
+                </p>
+                <p class="weetje">
+                    <b>Weetje:</b> Als je een <b>nieuwe</b> branch maakt, en je wilt die branch pushen naar GitHub, dan
+                    moet je
+                    eerst
+                    <b>git push --set-upstream origin <span style="color: #6da3e2 ;">"feature"</span></b> doen.
+                </p>
+
+            </section>
+
+            <section id="pages">
+                <h2>Extra GitHub pages</h2>
+                <p>
+                    GitHub pages is een service die je kubt gebruiken om je website te publiceren op het internet.
+                    (let op, github pages is momenteel enkel beschikbaar voor statische websites)
+                </p>
+            </section>
+
+
+            <h1></h1>
+            <footer>
+                <div class="d-flex flex-justify-between">
+                    <div> Made with ❤️ by <script>
+                            document.write(authors);
+                        </script>.</div>
+                    <div>Licensed under the <a target="_blank" href="./LICENSE">MIT License</a>.</div>
+                </div>
+
+            </footer>
     </main>
 </body>
 
