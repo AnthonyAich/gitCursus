@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini cursus Git met GitHub</title>
+    <title>Git gebruiken in samenwerking met GitHub</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <script defer src="./assets/js/util.js"></script>
     <script>
         const authors = "Anthony Aichouche";
+
+        //import file
+        const importFile = (path) => {
+            fetch(path)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector("main").innerHTML = document.querySelector("main").innerHTML + data;
+                });
+        }
     </script>
 </head>
 
@@ -18,7 +27,7 @@
         <p>
             <b>Last update:</b> <span data-git-info="date-git-info"></span>
         </p>
-        <h1><a href="#">Mini cursus Git met GitHub</a>
+        <h1><a href="#">Git gebruiken in samenwerking met GitHub</a>
         </h1>
         <div>
             <p>
@@ -44,7 +53,8 @@
                 <li>$ git <b>commit</b></li>
                 <li>$ git <b>push</b></li>
             </ul>
-            <li><b>Branches</b></li>
+            <li><b><a href="#branches">Branches</a></b></li>
+
             <ul>
                 <li>$ git <b>checkout</b></li>
                 <li>$ git <b>merge</b> branch-name</li>
@@ -80,21 +90,26 @@
         <section id="github">
             <h2>Wat is GitHub?</h2>
             <p>
-                GitHub is een plaats waar je <b>online</b> alle Git repositories kan <b>opslaan</b>. Voordeel daarvan
+                GitHub is een plaats waar je <b>online</b> alle Git <abbr class="info"
+                    uitleg="
+                    Een repository (repo) is een map waarin je alle bestanden van je project opslaat.">repositories</abbr> kan
+                <b>opslaan</b>. Voordeel daarvan
                 is dat je <b>online altijd je code kan terugvinden</b>.
                 <br>
-                Dat kan handig zijn als je bijvoorbeeld op school werkt aan een project, en dan thuis met een andere
-                computer verder wilt werken.</p>
+                Dat kan handig zijn als je bijvoorbeeld op je werk begint aan een project, en je wilt thuis verder
+                werken.
+            </p>
             </p>
             Een <b>ander voordeel</b> is dat je hiermee kunt <b>samenwerken met anderen</b>. Iedereen (van jouw team)
             kan
             code
             aannpassen en/of
-            toevoegen aan je repo.
+            toevoegen aan je projectje.
             </p>
         </section>
         <section id="terminal">
-            <h2>Laten we de Git(Hub) configureren.</h2>
+            <h2>Laten we de Git(Hub) terminal configureren.</h2>
+            <img src="./assets/memes/powerAc.png" alt="terminal">
             <p>
                 Om Git en GitHub ten volste te kunnen gebruiken, moet Git ook eerst weten wie je bent.
             </p>
@@ -115,8 +130,9 @@
             <h3>$ git clone</h3>
             <section class="uitleg">
                 <p>
-                    Git clone is een commando die een specifieke online <abbr class="info" uitleg="
-                    Een repository is een map waarin je alle bestanden van je project opslaat.">repository</abbr>
+                    Git clone is een commando die een specifieke online <abbr class="info"
+                        uitleg="
+                    Een repository (repo) is een map waarin je alle bestanden van je project opslaat.">repository</abbr>
                     importeerd naar de map
                     waarin je staat.
                     Het is eigenlijk hetzelfde als het downloaden van een repository.
@@ -126,14 +142,16 @@
                         git clone git@github.com:AnthonyAich/TestRepo.git
                     </code>
                 </p>
-                Je ziet dat er nu een nieuwe map gedownload werd. Hierin zitten alle bestanden van de repository.
-                <h3>Veel voorkomende files:</h3>
+                <p>Je ziet dat er nu een nieuwe map gedownload werd. Hierin zitten alle bestanden van de repository.</p>
+                <p class="vraag"> Euhm en <b>wat</b> zijn die <b>.gitignore</b> en <b>README.md</b> files daarbij?</p>
                 <article class="littleInfo">
                     <h3>.gitignore</h3>
                     <p>
                         In de map zit ook een bestand genaamd <b>.gitignore</b>. Dit is een bestand waarin je kan
-                        aangeven
-                        welke bestanden je niet wilt opslaan in je repository.
+                        <b>
+                            aangeven
+                            welke bestanden je niet wilt opslaan in je repository.
+                        </b>
                         <br>
                         Dit is handig als je bv. een bestand hebt met wachtwoorden, of een bestand met een API key nodig
                         hebt.
@@ -146,9 +164,8 @@
                         aangeven
                         wat de repository is, en wat er in zit.
                         <br>
-                        Dit is handig als je bv. een project maakt voor school, en je wilt dat je leerkracht weet wat er
-                        in
-                        zit. En je meer info wilt geven over je project.
+                        Dit is zeker handig als je een repository deelt met anderen, zodat ze weten wat de bedoeling is
+                        van je projectje.
                     </p>
                 </article>
             </section>
@@ -225,7 +242,7 @@
                 </p>
             </section>
             <h1></h1>
-            <h1>Branches</h1>
+            <h1 id="branches">Branches</h1>
             <div class="imgRight">
                 <div>
                     <p>
@@ -237,9 +254,8 @@
                         hoofdmap.
                     </p>
                 </div>
-                <!-- <img src="assets/memes/branch_meme.jpg" alt="meme branches"> -->
+                <img src="assets/memes/branch_meme.jpg" alt="meme branches">
             </div>
-
             <!-- ! git checkout -->
             <h3>$ git checkout</h3>
             <section class="uitleg">
@@ -250,7 +266,7 @@
                     <br />
                     Je kunt bv. een branch maken voor een nieuwe feature, en als je die feature af hebt kun je die
                     branch
-                    samenvoegen met de <b>master branch</b>.
+                    samenvoegen met de <b>main branch</b>.
                 </p>
                 <p>
                     <b>Voorbeeld voor checkouten:</b>
@@ -260,33 +276,104 @@
                 </p>
                 <p class="weetje">
                     <b>Weetje:</b> Als je een <b>nieuwe</b> branch maakt, en je wilt die branch pushen naar GitHub, dan
-                    moet je
-                    eerst
-                    <b>git push --set-upstream origin <span style="color: #6da3e2 ;">"feature"</span></b> doen.
+                    moet je eerst
+                    <br>&nbsp;&nbsp;&nbsp;
+                    <b>git push --set-upstream origin <span style="color: #6da3e2 ;">"feature"</span></b>
+                    doen.
                 </p>
-
             </section>
-
-            <section id="pages">
-                <h2>Extra GitHub pages</h2>
+            <h1></h1>
+            <!-- ! git merge -->
+            <h3>$ git merge</h3>
+            <section class="uitleg">
                 <p>
-                    GitHub pages is een service die je kubt gebruiken om je website te publiceren op het internet.
-                    (let op, github pages is momenteel enkel beschikbaar voor statische websites)
+                    Met het commando <b>Git merge</b> kun je twee branches samenvoegen.
+                    <br />
+                    Je kunt bv. een branch maken voor een nieuwe feature, en als je die feature af hebt kun je die
+                    branch
+                    samenvoegen met de <b>main branch</b>.
                 </p>
+                <h3 style="
+                color: #000;
+                ">
+                    Hoe doe ik dat?
+                </h3>
+                <p>
+                    <b>Stap 1:</b> Ga naar de branch waar je de andere branch in wilt samenvoegen.
+                    <br>
+                    <b>Stap 2:</b> Voer het commando <b><a href="#pull">git pull</a></b> uit.
+                    <br>
+                    <b>Stap 3:</b> Voer het commando <b>git merge "feature"</b> uit.
+                    <br>
+                    <b>Stap 4:</b> Voer het commando <b>git push</b> uit.
+                </p>
+                <h3 style=" color: #000; ">Voorbeeld voor mergen:</h3>
+                <p>
+                    Je hebt feature "footerToevoegen" gemaakt, en je wilt die nu samenvoegen met de main branch.
+                </p>
+                <p>
+                    S1: Ga naar de main branch:
+                    <code class="bash">
+                        git checkout <span style="color: #6da3e2;">main</span>
+                    </code>
+                </p>
+                <p>
+                    S2: De laatste versie van main importeren:
+                    <code class="bash">
+                        git pull
+                    </code>
+                </p>
+                <p>
+                    S3: Main en footerToevoegen samenvoegen:
+                    <code class="bash">
+                        git merge <span style="color: #6da3e2;">"footerToevoegen"</span>
+                    </code>
+                </p>
+                <p>
+                    S4: De samengevoegde versie van main uploaden naar GitHub:
+                    <code class="bash">
+                        git push
+                    </code>
+                </p>
+                <h2 style="color: crimson;border-bottom:none;">Je bent klaar!</h2>
             </section>
 
+            <section id=" pages">
+                <h1>GitHub Pages</h1>
+                <p>
+                    GitHub Pages is een service van GitHub, waar je een website kan hosten (online plaatsen).
+                </p>
+                <p>
+                    Je kan deze service gebruiken door een repository aan te maken, en dan in de settings van
+                    die
+                    repository
+                    <b>GitHub Pages</b> aan te zetten.
+                    <br>
+                    Je kunt daarna de website bekijken op <b>https://<span
+                            style="color: #6da3e2 ;">"username"</span>.github.io/<span
+                            style="color: #6da3e2 ;">"repository"</span></b>.
+                </p>
+            </section>
 
             <h1></h1>
-            <footer>
-                <div class="d-flex flex-justify-between">
-                    <div> Made with ❤️ by <script>
-                            document.write(authors);
-                        </script>.</div>
-                    <div>Licensed under the <a target="_blank" href="./LICENSE">MIT License</a>.</div>
-                </div>
+            <script>
+                //basic component based
 
-            </footer>
+                /*
+                importFile("./components/githubPages.html");
+                */
+            </script>
+
     </main>
+    <footer>
+        <div class="d-flex flex-justify-between container-lg">
+            <div> Made with ❤️ by <script>
+                    document.write(authors);
+                </script>.</div>
+            <div>Licensed under the <a target="_blank" href="./LICENSE">MIT License</a>.</div>
+        </div>
+
+    </footer>
 </body>
 
 </html>
