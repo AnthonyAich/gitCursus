@@ -6421,6 +6421,10 @@ pre {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .vraag {
   border: 1px solid #0366d6;
   padding: 3px 7px;
@@ -6529,5 +6533,24 @@ abbr.info {
 
 .uitleg {
   margin-left: 30px;
+}
+
+.progress {
+  height: 15px;
+  overflow: hidden;
+  background-color: #0366d6;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.progress p {
+  margin-top: 2px;
+  color: #fff;
+  line-height: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  float: right;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

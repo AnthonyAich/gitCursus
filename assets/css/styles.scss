@@ -6,6 +6,11 @@
     scroll-behavior: smooth;
 }
 
+//scrollbar hidden
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .vraag {
     //lightblue
     border: 1px solid #0366d6;
@@ -114,4 +119,23 @@ abbr.info {
 
 .uitleg {
     margin-left: 30px;
+}
+
+.progress {
+    height: 15px;
+    overflow: hidden;
+    background-color: #0366d6;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    p {
+        margin-top: 2px;
+        color: #fff;
+        line-height: 10px;
+        font-size: 13px;
+        font-weight: bold;
+        float: right;
+        margin-right: 10px;
+    }
 }

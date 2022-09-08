@@ -19,10 +19,22 @@
                     document.querySelector("main").innerHTML = document.querySelector("main").innerHTML + data;
                 });
         }
+
+        //scroll loading bar
+        window.addEventListener("scroll", () => {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+            document.querySelector(".progress").style.width = `${(scrolled / scrollable) * 100}%`;
+            document.querySelector("#percentage__progress").innerHTML =
+                `${Math.round((scrolled / scrollable) * 100)}%`;
+        });
     </script>
 </head>
 
 <body class="markdown-body">
+    <div class="progress">
+        <p id="percentage__progress"></p>
+    </div>
     <main id="main" class="container-lg px-3 my-5">
         <p>
             <b>Last update:</b> <span data-git-info="date-git-info"></span>
